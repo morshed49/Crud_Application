@@ -1,0 +1,45 @@
+<%- include('include/header') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary">
+                    <h3 class="text-light text-center">Add New User</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/add" method="POST" id="add-form" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="name">Full Name:</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter number"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mage">Image:</label>
+                            <input type="file" name="image" id="image" class="form-control" placeholder="Enter number"
+                                accept="image/*" required>
+                        </div>
+                      <div class="mb-3">
+                          <input type="submit" name="submit" class="form-control btn btn-outline-primary btn-md mt-2"
+                              value="Add User">
+                      </div>
+
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('include/footer') %>
